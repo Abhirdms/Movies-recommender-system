@@ -36,7 +36,7 @@ st.title("Movie Recommender System")
 
 # adding a select-box for user input
 selected_movie_name = st.selectbox(
-    'How would you like to be contacted?',
+    'Enter the movie name you like ',
     movies['title'].values)
 
 
