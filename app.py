@@ -196,7 +196,9 @@ if st.button('Recommend'):
         with col[i % 3]:
             st.write(names[i])
             st.video(video_url[i])
-            
+
+
+
               # adding space
             col = st.columns(1)
             for i in range(5):
