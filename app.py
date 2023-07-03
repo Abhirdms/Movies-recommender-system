@@ -177,14 +177,23 @@ for i in range(2):
     with col[0]:
         st.write("")
 
+# ----------------------------------------------------Movie Recommender System--------------------------------
+st.title("Movie Recommender System")
+st.write("Discover your next favorite movie with our personalized recommender system."
+         " Get tailored movie recommendations based on your unique preferences and enhance your movie-watching experience.")
+
+# adding space
+col = st.columns(1)
+for i in range(2):
+    with col[0]:
+        st.write("")
+
 # adding a select-box for user input
 selected_movie_name = st.selectbox(
     'Select your favourite movie',
     movies['title'].values)
 
 
-
-# try:
 #adding a button to get recommendation on clicking
 if st.button('Recommend'):
     names, poster, movie_id = recommend(selected_movie_name)
@@ -199,12 +208,11 @@ if st.button('Recommend'):
             st.video(video_url[i])
 
 
-
-          # adding space
-        col = st.columns(1)
-        for i in range(5):
-            with col[0]:
-                st.write("")
+# adding space
+col = st.columns(1)
+for i in range(5):
+    with col[0]:
+        st.write("")
 # except IndexError:
 #     st.write("Not Found")
 # except TypeError:
