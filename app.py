@@ -185,7 +185,7 @@ selected_movie_name = st.selectbox(
 
 #adding a button to get recommendation on clicking
 
-    if st.button('Recommend'):
+if st.button('Recommend'):
     names, poster, movie_id = recommend(selected_movie_name)
     video_url = fetch_trailer(movie_id)
 
