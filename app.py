@@ -165,18 +165,6 @@ def fetch_title(sorted_data):
 # ---------------------------------------------frontend of website--------------------------------------------------
 
 
-
-# ----------------------------------------------------Movie Recommender System--------------------------------
-st.title("Movie Recommender System")
-st.write("Discover your next favorite movie with our personalized recommender system."
-         " Get tailored movie recommendations based on your unique preferences and enhance your movie-watching experience.")
-
-# adding space
-col = st.columns(1)
-for i in range(2):
-    with col[0]:
-        st.write("")
-
 # ----------------------------------------------------Movie Recommender System--------------------------------
 st.title("Movie Recommender System")
 st.write("Discover your next favorite movie with our personalized recommender system."
