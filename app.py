@@ -184,7 +184,8 @@ selected_movie_name = st.selectbox(
 
 
 #adding a button to get recommendation on clicking
-if st.button('Recommend'):
+try:
+    if st.button('Recommend'):
     names, poster, movie_id = recommend(selected_movie_name)
     video_url = fetch_trailer(movie_id)
 
@@ -195,13 +196,19 @@ if st.button('Recommend'):
         with col[i % 3]:
             st.write(names[i])
             st.video(video_url[i])
+            
+              # adding space
+            col = st.columns(1)
+            for i in range(5):
+                with col[0]:
+                    st.write("")
+except IndexError:
+    st.write("Not Found")
+except TypeError:
+    st.write("Data Not Found")
+          
 
 
-# adding space
-col = st.columns(1)
-for i in range(5):
-    with col[0]:
-        st.write("")
 
 
 # -------------------------------------------------------Recommendation Based on Input-------------------------------------
