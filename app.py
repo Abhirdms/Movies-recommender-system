@@ -199,11 +199,11 @@ if st.button('Recommend'):
 
 
 
-              # adding space
-            col = st.columns(1)
-            for i in range(5):
-                with col[0]:
-                    st.write("")
+# adding space
+col = st.columns(1)
+for i in range(5):
+    with col[0]:
+        st.write("")
 
 
 
